@@ -11,14 +11,16 @@ import {
   UtxoImage,
 } from "./styled";
 import { HeaderTypography } from "../../components/Common/CommonTypography";
-import { LastGradientBox, MainBox } from "../Header/Styled";
+import { GradientBox, LastGradientBox, MainBox } from "../Header/Styled";
 
 const HomePage = () => {
   const theme = useTheme();
+  console.log("theme", theme);
+
   return (
-    <MainBox>
+    <MainBox mode={theme?.palette?.mode}>
       <Header />
-      <Box
+      <GradientBox
         display={"flex"}
         flexDirection={"column"}
         gap={"72px"}
@@ -86,7 +88,7 @@ const HomePage = () => {
             <ContentBox data={item} theme={theme} />
           </StyledBox>
         ))}
-      </Box>
+      </GradientBox>
       <LastGradientBox />
       <Footer />
     </MainBox>

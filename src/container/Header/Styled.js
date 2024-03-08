@@ -19,10 +19,10 @@ export const LeftConatiner = styled.div`
     width: 171px;
     height: 65px;
     @media screen and (max-width: 600px) {
-     height : 50px ;
-     width: auto;
+      height: 50px;
+      width: auto;
     }
-  } 
+  }
 `;
 
 export const RightContainer = styled.div`
@@ -30,7 +30,6 @@ export const RightContainer = styled.div`
   gap: 20px;
   align-items: center;
   @media screen and (max-width: 800px) {
-    align-items: start;
     height: fit-content;
     gap: 0px;
   }
@@ -149,11 +148,13 @@ export const ConnectStyledItem = styled(Grid)(({ theme }) => ({
   },
 }));
 
-export const HeaderText = styled.div`
+export const HeaderText = styled.div(
+  {},
+  ({ color }) => `
   font-size: 24px;
   line-height: 36px;
   font-weight: 400;
-  color: #121212;
+  color: ${color};
   :hover {
     cursor: pointer;
     color: #1dd773;
@@ -162,19 +163,27 @@ export const HeaderText = styled.div`
     font-size: 18px;
     line-height: normal;
   }
-`;
+`
+);
 
-export const MainBox = styled(Box)`
+export const MainBox = styled(Box)(
+  {},
+  ({ mode }) => `
+background: ${
+    mode === "dark"
+      ? `url('/images/dark mode.jpg') no-repeat center center/cover`
+      : `url('/images/light mode.jpg') no-repeat center center/cover`
+  };
   ::before {
-    content: "";
+    /* content: "";
     background: url("/images/gradient.svg") no-repeat center center/cover;
     opacity: 1;
     position: absolute;
     top: 0px;
     right: 0px;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+    z-index: -1; */
     /* max-height: 1491px;
     width: 100%; */
   }
@@ -185,10 +194,13 @@ export const MainBox = styled(Box)`
     opacity: 1;
     top: 414px;
     left: 0px;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
   } */
-`;
+`
+);
 
 export const LastGradientBox = styled(Box)`
   /* ::before {
@@ -202,6 +214,18 @@ export const LastGradientBox = styled(Box)`
   } */
 `;
 
+export const GradientBox = styled(Box)`
+  /* ::after {
+  content: '';
+  background: url('/images/gradient3.svg') no-repeat;
+  position: absolute;
+    bottom: 0px;
+    right: 0px;
+    height: 2383px;
+    width: 100%;
+   background-position: right bottom; 
+} */
+`;
 
 export const StyledButton = styled(CommonButton)`
   @media screen and (max-width: 1024px) {
@@ -210,5 +234,9 @@ export const StyledButton = styled(CommonButton)`
   }
   @media screen and (max-width: 768px) {
     font-size: 16px;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 14px;
+    padding: 10px 10px;
   }
 `;

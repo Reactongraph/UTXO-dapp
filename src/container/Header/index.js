@@ -1,6 +1,11 @@
 import { Box } from "@mui/material";
 import React, { useState } from "react";
-import { HeaderText, LeftConatiner, RightContainer, StyledButton } from "./Styled";
+import {
+  HeaderText,
+  LeftConatiner,
+  RightContainer,
+  StyledButton,
+} from "./Styled";
 import { CommonButton } from "../../components/Common/CommonButton";
 import CommonPopover from "../../components/Common/CommonPopover";
 import PopoverContentData from "./popoverContentData";
@@ -16,26 +21,41 @@ const Header = () => {
     setAnchorEl(event.currentTarget);
     setViewPopover(!viewPopover);
   };
-  // console.log("themetheme", theme?.palette?.primary);
+  const [windowWidth, setWindowWidth] = React.useState(window?.innerWidth);
+
+  React.useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
-      <Box position={"relative"} zIndex={"1"}>
+      <Box
+        position={"relative"}
+        zIndex={"1"}
+        padding="42px 112px 0px"
+        gap={"10px"}
+        sx={{
+          "@media screen and (max-width: 1024px)": {
+            padding: "42px 60px 0",
+          },
+          "@media screen and (max-width: 768px)": {
+            padding: "42px 40px 20px",
+          },
+          "@media screen and (max-width: 468px)": {
+            padding: "32px 12px 10px",
+          },
+        }}
+      >
         <Box
           display="flex"
           justifyContent="space-between"
-          padding="42px 112px 0px"
           gap="30px"
-          sx={{
-            "@media screen and (max-width: 1024px)": {
-              padding: "42px 60px 0",
-            },
-            "@media screen and (max-width: 768px)": {
-              padding: "42px 40px 20px",
-            },
-            "@media screen and (max-width: 468px)": {
-              padding: "42px 20px 20px",
-            },
-          }}
           position={"relative"}
           zIndex={"1"}
           alignItems={"center"}
@@ -50,18 +70,24 @@ const Header = () => {
             </Box>
             {/* <HeaderCard theme={theme?.palette} /> */}
           </LeftConatiner>
-          <Box
-            display={"flex"}
-            gap={"74px"}
-            sx={{
-              "@media screen and (max-width: 1024px)": {
-                gap: "30px",
-              },
-            }}
-          >
-            <HeaderText>Explore</HeaderText>
-            <HeaderText>Socials</HeaderText>
-          </Box>
+          {windowWidth > 600 && (
+            <Box
+              display={"flex"}
+              gap={"74px"}
+              sx={{
+                "@media screen and (max-width: 1024px)": {
+                  gap: "30px",
+                },
+              }}
+            >
+              <HeaderText color={theme?.palette?.primary?.typography}>
+                Explore
+              </HeaderText>
+              <HeaderText color={theme?.palette?.primary?.typography}>
+                Socials
+              </HeaderText>
+            </Box>
+          )}
           <RightContainer>
             <Box>
               {/* <RightContent theme={theme?.palette} /> */}
@@ -83,7 +109,7 @@ const Header = () => {
                 bg="#06FF79"
                 bgHover="#06FF79"
                 aria-describedby={viewPopover ? "simple-popover" : undefined}
-                onClick={handleClick}
+                // onClick={handleClick}
               >
                 Enter Dapp
               </StyledButton>
@@ -96,15 +122,24 @@ const Header = () => {
             </Box>
           </RightContainer>
         </Box>
-        {theme?.palette?.mode === "dark" && window.innerWidth > 756 && (
+        {windowWidth < 600 && (
           <Box
-            width={"681.67px"}
-            height={"520.87px"}
-            position={"absolute"}
-            top="125px"
-            right="0"
+            display={"flex"}
+            gap={"74px"}
+            justifyContent="flex-end"
+            margin="10px 10px 0"
+            sx={{
+              "@media screen and (max-width: 1024px)": {
+                gap: "30px",
+              },
+            }}
           >
-            <img src="/images/shadow-top.png" alt="logo" width={"100%"} />
+            <HeaderText color={theme?.palette?.primary?.typography}>
+              Explore
+            </HeaderText>
+            <HeaderText color={theme?.palette?.primary?.typography}>
+              Socials
+            </HeaderText>
           </Box>
         )}
       </Box>

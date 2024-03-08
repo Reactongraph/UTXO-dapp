@@ -18,6 +18,10 @@ export const PrimaryButton = styled(Button)`
   @media screen and (max-width: 768px) {
     font-size: 14px !important;
   }
+  &:hover {
+    color: #ffffff !important;
+    background-color: #05b858 !important;
+  }
 `;
 
 export const StyledBox = styled(Box)`
@@ -61,7 +65,7 @@ export const JoinTelegramButton = styled(Button)`
 
 export const UtxoImage = styled.img`
   height: 872px;
-   @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     height: 400px;
   }
   @media screen and (max-width: 768px) {
@@ -74,10 +78,10 @@ export const UtxoImage = styled.img`
 
 export const StyledImage = styled.img`
   height: 435px;
-  @media screen and (max-width: 768px) {
-    height: 250px;
+  @media screen and (max-width: 820px) {
+    height: 300px;
   }
   @media screen and (max-width: 600px) {
-    height: 150px;
+    height: 200px;
   }
 `;
