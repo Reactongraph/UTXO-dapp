@@ -122,7 +122,7 @@ const Header = () => {
             </Box>
           </RightContainer>
         </Box>
-        {windowWidth < 600 && (
+        {windowWidth < 601 && (
           <Box
             display={"flex"}
             gap={"74px"}
