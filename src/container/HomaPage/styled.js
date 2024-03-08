@@ -53,6 +53,7 @@ export const JoinTelegramButton = styled(Button)`
   line-height: 36px !important;
   color: #121212 !important;
   margin-top: 32px !important;
+  white-space: nowrap;
   @media screen and (max-width: 1024px) {
     padding: 10px !important;
     font-size: 18px !important;
@@ -60,6 +61,14 @@ export const JoinTelegramButton = styled(Button)`
   }
   @media screen and (max-width: 768px) {
     font-size: 14px !important;
+  }
+  @media screen and (max-width: 468px) {
+    .MuiButton-endIcon {
+      margin-left: 4px !important;
+      img {
+        height: 32px;
+      }
+    }
   }
 `;
 

@@ -44,8 +44,9 @@ const HomePage = () => {
               padding: "0px 0px 0px 40px",
             },
             "@media screen and (max-width: 468px)": {
-              padding: "20px",
-              flexDirection: "column-reverse",
+              padding: "20px 0 20px 20px",
+              alignItems: 'flex-start'
+              // flexDirection: "column-reverse",
             },
           }}
         >
@@ -60,6 +61,9 @@ const HomePage = () => {
                 },
                 "@media screen and (max-width: 768px)": {
                   fontSize: "32px",
+                },
+                "@media screen and (max-width: 468px)": {
+                  fontSize: "28px",
                 },
               }}
             >
