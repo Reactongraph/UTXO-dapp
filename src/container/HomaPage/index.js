@@ -44,7 +44,7 @@ const HomePage = () => {
             },
             "@media screen and (max-width: 468px)": {
               padding: "20px 0 20px 20px",
-              alignItems: 'flex-start'
+              alignItems: "flex-start",
             },
           }}
         >
@@ -72,7 +72,10 @@ const HomePage = () => {
             </HeaderTypography>
             <JoinTelegramButton
               variant="contained"
-              endIcon={<img src="/images/telegram.svg" alt="telegram" height='40' />}
+              endIcon={
+                <img src="/images/telegram.svg" alt="telegram" height="40" />
+              }
+              onClick={() => window.open("https://t.me/UTXO_SRC20", "_blank")}
             >
               Join us on Telegram
             </JoinTelegramButton>
