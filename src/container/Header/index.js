@@ -6,21 +6,12 @@ import {
   RightContainer,
   StyledButton,
 } from "./Styled";
-import { CommonButton } from "../../components/Common/CommonButton";
-import CommonPopover from "../../components/Common/CommonPopover";
-import PopoverContentData from "./popoverContentData";
-import { HeaderCard, RightContent } from "./headerContent";
 import { useTheme } from "@mui/material/styles";
 import ToggleButton from "../../components/ToggleButton/toggleButton";
 
 const Header = () => {
   const [viewPopover, setViewPopover] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null);
   const theme = useTheme();
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-    setViewPopover(!viewPopover);
-  };
   const [windowWidth, setWindowWidth] = React.useState(window?.innerWidth);
 
   React.useEffect(() => {
@@ -48,7 +39,7 @@ const Header = () => {
             padding: "42px 40px 20px",
           },
           "@media screen and (max-width: 468px)": {
-            padding: "32px 12px 10px",
+            padding: "32px 12px 20px",
           },
         }}
       >
@@ -68,7 +59,6 @@ const Header = () => {
                 <img src="/images/logo-dark-header.svg" alt="logo" />
               )}
             </Box>
-            {/* <HeaderCard theme={theme?.palette} /> */}
           </LeftConatiner>
           {windowWidth > 600 && (
             <Box
@@ -90,16 +80,9 @@ const Header = () => {
           )}
           <RightContainer>
             <Box>
-              {/* <RightContent theme={theme?.palette} /> */}
               <ToggleButton />
             </Box>
             <Box id="header-pop">
-              {/* <CommonButton
-                fz="1.125em"
-                pd="14px 31px"
-                aria-describedby={viewPopover ? "simple-popover" : undefined}
-                onClick={handleClick}
-              > */}
               <StyledButton
                 fz="24px"
                 pd="12px 33.5px"
@@ -109,16 +92,9 @@ const Header = () => {
                 bg="#06FF79"
                 bgHover="#06FF79"
                 aria-describedby={viewPopover ? "simple-popover" : undefined}
-                // onClick={handleClick}
               >
                 Enter Dapp
               </StyledButton>
-              <CommonPopover
-                open={viewPopover}
-                content={<PopoverContentData theme={theme?.palette} />}
-                onClose={() => setViewPopover(false)}
-                anchorEl={anchorEl}
-              />
             </Box>
           </RightContainer>
         </Box>
@@ -126,7 +102,6 @@ const Header = () => {
           <Box
             display={"flex"}
             gap={"74px"}
-            justifyContent="flex-end"
             margin="10px 10px 0"
             sx={{
               "@media screen and (max-width: 1024px)": {

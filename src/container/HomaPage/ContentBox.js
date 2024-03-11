@@ -16,6 +16,9 @@ const ContentBox = ({ data, theme }) => {
         "@media screen and (max-width: 768px)": {
           gap: "20px",
         },
+        "@media screen and (max-width: 468px)": {
+          gap: "10px",
+        },
       }}
     >
       <HeaderTypography
@@ -28,6 +31,9 @@ const ContentBox = ({ data, theme }) => {
           },
           "@media screen and (max-width: 768px)": {
             fontSize: "24px",
+          },
+          "@media screen and (max-width: 468px)": {
+            fontSize: "20px",
           },
         }}
       >
@@ -45,6 +51,9 @@ const ContentBox = ({ data, theme }) => {
           "@media screen and (max-width: 768px)": {
             gap: "12px",
           },
+          "@media screen and (max-width: 468px)": {
+            gap: "4px",
+          },
         }}
       >
         <HeaderTypography
@@ -56,6 +65,9 @@ const ContentBox = ({ data, theme }) => {
             },
             "@media screen and (max-width: 768px)": {
               fontSize: "14px",
+            },
+            "@media screen and (max-width: 4768px)": {
+              fontSize: "12px",
             },
           }}
         >
@@ -70,6 +82,9 @@ const ContentBox = ({ data, theme }) => {
             },
             "@media screen and (max-width: 768px)": {
               fontSize: "14px",
+            },
+            "@media screen and (max-width: 4768px)": {
+              fontSize: "12px",
             },
           }}
         >

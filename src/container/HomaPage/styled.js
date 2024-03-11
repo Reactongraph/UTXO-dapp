@@ -38,8 +38,9 @@ export const StyledBox = styled(Box)`
     gap: 20px !important;
   }
   @media screen and (max-width: 468px) {
-    flex-direction: column !important;
+    align-items: flex-start !important;
     padding: 20px !important;
+    gap: 8px !important;
   }
 `;
 
@@ -66,7 +67,7 @@ export const JoinTelegramButton = styled(Button)`
     .MuiButton-endIcon {
       margin-left: 4px !important;
       img {
-        height: 32px;
+        height: 18px;
       }
     }
   }
@@ -91,6 +92,9 @@ export const StyledImage = styled.img`
     height: 300px;
   }
   @media screen and (max-width: 600px) {
-    height: 200px;
+    height: 150px;
+  }
+  @media screen and (max-width: 468px) {
+    height: 100px;
   }
 `;

@@ -11,16 +11,15 @@ import {
   UtxoImage,
 } from "./styled";
 import { HeaderTypography } from "../../components/Common/CommonTypography";
-import { GradientBox, LastGradientBox, MainBox } from "../Header/Styled";
+import { MainBox } from "../Header/Styled";
 
 const HomePage = () => {
   const theme = useTheme();
-  console.log("theme", theme);
 
   return (
     <MainBox mode={theme?.palette?.mode}>
       <Header />
-      <GradientBox
+      <Box
         display={"flex"}
         flexDirection={"column"}
         gap={"72px"}
@@ -46,7 +45,6 @@ const HomePage = () => {
             "@media screen and (max-width: 468px)": {
               padding: "20px 0 20px 20px",
               alignItems: 'flex-start'
-              // flexDirection: "column-reverse",
             },
           }}
         >
@@ -74,7 +72,7 @@ const HomePage = () => {
             </HeaderTypography>
             <JoinTelegramButton
               variant="contained"
-              endIcon={<img src="/images/rocket.svg" alt="rocket" />}
+              endIcon={<img src="/images/linkedin.svg" alt="linkedin" height='40' />}
             >
               Join us on Telegram
             </JoinTelegramButton>
@@ -92,8 +90,7 @@ const HomePage = () => {
             <ContentBox data={item} theme={theme} />
           </StyledBox>
         ))}
-      </GradientBox>
-      <LastGradientBox />
+      </Box>
       <Footer />
     </MainBox>
   );
