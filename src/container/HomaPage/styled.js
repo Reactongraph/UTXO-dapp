@@ -75,6 +75,9 @@ export const JoinTelegramButton = styled(Button)`
 
 export const UtxoImage = styled.img`
   height: 872px;
+  @media screen and (max-width: 1200px) {
+    height: 700px;
+  }
   @media screen and (max-width: 1024px) {
     height: 400px;
   }
