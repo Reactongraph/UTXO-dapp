@@ -7,6 +7,10 @@ const ContentBox = ({ data, theme }) => {
   const headerText = data?.header;
   const utxoIndex = headerText.indexOf("UTXO");
 
+  const handleButtonClick = () => {
+    window.open("https://t.me/UTXO_SRC20", "_blank");
+  };
+
   return (
     <Box
       display={"flex"}
@@ -66,7 +70,7 @@ const ContentBox = ({ data, theme }) => {
             "@media screen and (max-width: 768px)": {
               fontSize: "14px",
             },
-            "@media screen and (max-width: 4768px)": {
+            "@media screen and (max-width: 468px)": {
               fontSize: "12px",
             },
           }}
@@ -83,7 +87,7 @@ const ContentBox = ({ data, theme }) => {
             "@media screen and (max-width: 768px)": {
               fontSize: "14px",
             },
-            "@media screen and (max-width: 4768px)": {
+            "@media screen and (max-width: 468px)": {
               fontSize: "12px",
             },
           }}
@@ -91,7 +95,11 @@ const ContentBox = ({ data, theme }) => {
           {data?.subtitle2}
         </HeaderTypography>
       </Box>
-      <PrimaryButton variant="outlined" size="large">
+      <PrimaryButton
+        variant="outlined"
+        size="large"
+        onClick={handleButtonClick}
+      >
         Learn more
       </PrimaryButton>
     </Box>

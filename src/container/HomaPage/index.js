@@ -33,7 +33,7 @@ const HomePage = () => {
         <Box
           display={"flex"}
           padding={"0px 0px 0px 112px"}
-          alignItems={"center"}
+          // alignItems={"center"}
           maxWidth={"1440px"}
           sx={{
             "@media screen and (max-width: 1024px)": {
@@ -72,7 +72,7 @@ const HomePage = () => {
             </HeaderTypography>
             <JoinTelegramButton
               variant="contained"
-              endIcon={<img src="/images/linkedin.svg" alt="linkedin" height='40' />}
+              endIcon={<img src="/images/telegram.svg" alt="telegram" height='40' />}
             >
               Join us on Telegram
             </JoinTelegramButton>

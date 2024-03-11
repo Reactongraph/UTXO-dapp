@@ -38,9 +38,8 @@ export const StyledBox = styled(Box)`
     gap: 20px !important;
   }
   @media screen and (max-width: 468px) {
-    align-items: flex-start !important;
+    flex-direction: column !important;
     padding: 20px !important;
-    gap: 8px !important;
   }
 `;
 
@@ -64,17 +63,18 @@ export const JoinTelegramButton = styled(Button)`
     font-size: 14px !important;
   }
   @media screen and (max-width: 468px) {
+    margin-top: 16px !important;
     .MuiButton-endIcon {
       margin-left: 4px !important;
       img {
-        height: 18px;
+        height: 20px;
       }
     }
   }
 `;
 
 export const UtxoImage = styled.img`
-  height: 872px;
+  height: 800px;
   @media screen and (max-width: 1200px) {
     height: 700px;
   }
@@ -87,6 +87,9 @@ export const UtxoImage = styled.img`
   @media screen and (max-width: 600px) {
     height: 150px;
   }
+  @media screen and (max-width: 350px) {
+    height: 120px;
+  }
 `;
 
 export const StyledImage = styled.img`
@@ -95,9 +98,9 @@ export const StyledImage = styled.img`
     height: 300px;
   }
   @media screen and (max-width: 600px) {
-    height: 150px;
+    height: 200px;
   }
   @media screen and (max-width: 468px) {
-    height: 100px;
+    height: 150px;
   }
 `;

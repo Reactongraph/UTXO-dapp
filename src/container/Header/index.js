@@ -24,16 +24,20 @@ const Header = () => {
     };
   }, []);
 
+  const handleButtonClick = () => {
+    window.open('http://www.src20utxo.app/', '_blank');
+  };
+
   return (
     <>
       <Box
         position={"relative"}
         zIndex={"1"}
-        padding="42px 112px 0px"
+        padding="42px 112px"
         gap={"10px"}
         sx={{
           "@media screen and (max-width: 1024px)": {
-            padding: "42px 60px 0",
+            padding: "42px 60px",
           },
           "@media screen and (max-width: 768px)": {
             padding: "42px 40px 20px",
@@ -92,6 +96,7 @@ const Header = () => {
                 bg="#06FF79"
                 bgHover="#06FF79"
                 aria-describedby={viewPopover ? "simple-popover" : undefined}
+                onClick={handleButtonClick}
               >
                 Enter Dapp
               </StyledButton>
