@@ -40,13 +40,14 @@ export const StyledBox = styled(Box)`
   @media screen and (max-width: 468px) {
     flex-direction: column !important;
     padding: 20px !important;
+    align-items: flex-start !important;
   }
 `;
 
 export const JoinTelegramButton = styled(Button)`
   background-color: #06ff79 !important;
   box-shadow: none !important;
-  border-radius: 32px !important;
+  border-radius: 16px !important;
   padding: 12px 16px !important;
   font-weight: 400 !important;
   font-size: 24px !important;
