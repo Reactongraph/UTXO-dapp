@@ -57,7 +57,7 @@ export const MainBox = styled(Box)(
     background: ${
         mode === "dark"
           ? `url('/images/dark mode.jpg') no-repeat center center/cover`
-          : `url('/images/light mode5.jpg') no-repeat center center/cover`
+          : `url('/images/light mode.jpg') no-repeat center center/cover`
       };
 `
 );

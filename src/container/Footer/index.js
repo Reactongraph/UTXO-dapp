@@ -12,9 +12,9 @@ import {
 import { useTheme } from "@mui/material/styles";
 
 const FooterData = [
-  { site: "utxo.site", url: 'https://www.utxo.site/' },
-  { site: "src20utxo.com", url: 'http://src20utxo.com/' },
-  { site: "src20utxo.app", url: 'http://src20utxo.app/' },
+  { site: "utxo.site", url: "https://www.utxo.site/" },
+  { site: "src20utxo.com", url: "http://src20utxo.com/" },
+  { site: "src20utxo.app", url: "http://src20utxo.app/" },
 ];
 const FooterPreData = ["Docs", "Github", "Gitbook"];
 const FooterPreSouce = [
@@ -163,16 +163,7 @@ const Footer = () => {
             })}
           </Box>
           <Box>
-            <Box
-              // display={"flex"}
-              // alignContent={"top"}
-              // columnGap={"23px"}
-              marginBottom={"15px"}
-            >
-              {/* <WrapperSecond
-                src="/images/vector.svg"
-                alt="icon"
-              ></WrapperSecond> */}
+            <Box marginBottom={"15px"}>
               <HeaderTypography fz="1.0625em" fc="#fff" fw="500">
                 Website
               </HeaderTypography>
