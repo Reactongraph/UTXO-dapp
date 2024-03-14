@@ -9,7 +9,7 @@ export const HomeCardsData = [
   },
   {
     imageUrl: "/images/utxo3.svg",
-    header: "Discover all new potential uittilty that UTXO offers today!",
+    header: "Discover all new potential utility that UTXO offers today!",
     subtitle1:
       "By joining our community, you will have the opportunity to: Engage with Like-Minded Individuals: ",
     subtitle2:
