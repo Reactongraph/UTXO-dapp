@@ -34,14 +34,16 @@ const FooterPreSouce = [
     text: "Discord",
     light: "social-3",
     dark: "social-3-dark",
-    url: "https://discord.com/invite/d4wbMQyNke",
+    url: "",
   },
 ];
 
 const Footer = () => {
   const theme = useTheme();
-  const handleButtonClick = (url) => {
-    window.open(url, "_blank");
+  const handleButtonClick = (text, url) => {
+    if (text !== "Discord") {
+      window.open(url, "_blank");
+    }
   };
 
   return (
@@ -90,9 +92,6 @@ const Footer = () => {
                   : "/images/discord-dark.svg"
               }
               alt="icon"
-              onClick={() =>
-                window.open("https://discord.com/invite/d4wbMQyNke", "_blank")
-              }
             ></WrapperSecond>
             <WrapperSecond
               src={
@@ -130,7 +129,7 @@ const Footer = () => {
                   <WrapperBox
                     display={"flex"}
                     columnGap={"10px"}
-                    onClick={() => handleButtonClick(item?.url)}
+                    onClick={() => handleButtonClick(item.text, item?.url)}
                   >
                     <img
                       src={`/images/${
