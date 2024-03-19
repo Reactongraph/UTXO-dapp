@@ -148,7 +148,6 @@ const Footer = () => {
             })}
           </Box>
           <Box>
-            {/* <img src="/images/resouce.svg" alt="icon"></img> */}
             <HeaderTypography
               fz="1.063em"
               fc="#fff"
@@ -181,11 +180,9 @@ const Footer = () => {
       {theme?.palette?.mode === "dark" && window.innerWidth > 756 && (
         <Box
           width={"681.67px"}
-          // height={"520.87px"}
           height={"300px"}
           position={"absolute"}
           left="0"
-          // bottom="73px"
           bottom={"220px"}
         >
           <img

@@ -33,7 +33,6 @@ const HomePage = () => {
         <Box
           display={"flex"}
           padding={"0px 0px 0px 112px"}
-          // alignItems={"center"}
           maxWidth={"1440px"}
           sx={{
             "@media screen and (max-width: 1024px)": {
