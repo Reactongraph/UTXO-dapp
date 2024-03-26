@@ -25,7 +25,7 @@ const Header = () => {
   }, []);
 
   const handleButtonClick = () => {
-    window.open('http://www.src20utxo.app/', '_blank');
+    window.open("http://www.src20utxo.app/", "_blank");
   };
 
   return (
@@ -63,25 +63,25 @@ const Header = () => {
                 <img src="/images/logo-dark-header.svg" alt="logo" />
               )}
             </Box>
-          </LeftConatiner>
-          {windowWidth > 600 && (
-            <Box
-              display={"flex"}
-              gap={"74px"}
-              sx={{
-                "@media screen and (max-width: 1024px)": {
-                  gap: "30px",
-                },
-              }}
-            >
-              <HeaderText color={theme?.palette?.primary?.typography}>
-                Explore
-              </HeaderText>
-              <HeaderText color={theme?.palette?.primary?.typography}>
+            {windowWidth > 600 && (
+              <Box
+                display={"flex"}
+                gap={"74px"}
+                sx={{
+                  "@media screen and (max-width: 1024px)": {
+                    gap: "30px",
+                  },
+                }}
+              >
+                <HeaderText color={theme?.palette?.primary?.typography}>
+                  Ecosystem
+                </HeaderText>
+                {/* <HeaderText color={theme?.palette?.primary?.typography}>
                 Socials
-              </HeaderText>
-            </Box>
-          )}
+              </HeaderText> */}
+              </Box>
+            )}
+          </LeftConatiner>
           <RightContainer>
             <Box>
               <ToggleButton />
@@ -115,11 +115,11 @@ const Header = () => {
             }}
           >
             <HeaderText color={theme?.palette?.primary?.typography}>
-              Explore
+              Ecosystem
             </HeaderText>
-            <HeaderText color={theme?.palette?.primary?.typography}>
+            {/* <HeaderText color={theme?.palette?.primary?.typography}>
               Socials
-            </HeaderText>
+            </HeaderText> */}
           </Box>
         )}
       </Box>
